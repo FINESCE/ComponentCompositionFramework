@@ -28,7 +28,7 @@ Components implementing IComponent is managed and connected by the Composition S
 
 In order to implement a Component, one must implement the IComponent interface:
 
-![IMAGE NOT FOUND](https://raw.github.com/insero-software/component-composition-framework/blob/master/Documentation/IComponent.png)
+![IMAGE NOT FOUND](https://raw.githubusercontent.com/insero-software/component-composition-framework/master/Documentation/IComponent.png)
 
 The starting point for any Component is the “Start” method, which is called by the Composition Service when it is determined the Component should be started. The Name and Description properties are strictly for debugging purposes.
  
