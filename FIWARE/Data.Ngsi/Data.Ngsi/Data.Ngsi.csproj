@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{869ABD4C-A836-4EC3-B246-1CDEEEB5AFA2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FIWARE.Data.Ngsi</RootNamespace>
+    <AssemblyName>FIWARE.Data.Ngsi</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\ContextAttribute.cs" />
+    <Compile Include="Model\ContextElement.cs" />
+    <Compile Include="Model\ContextElementResponse.cs" />
+    <Compile Include="Model\ContextMetadata.cs" />
+    <Compile Include="Model\ContextRegistration.cs" />
+    <Compile Include="Model\ContextRegistrationAttribute.cs" />
+    <Compile Include="Model\ContextRegistrationResponse.cs" />
+    <Compile Include="Model\EntityID.cs" />
+    <Compile Include="Model\NetworkDomain.cs" />
+    <Compile Include="Model\NotificationCondition.cs" />
+    <Compile Include="Model\NotifyCondition.cs" />
+    <Compile Include="Model\OperationScope.cs" />
+    <Compile Include="Model\Restriction.cs" />
+    <Compile Include="Model\Serialization\JsonAnyUtilities.cs" />
+    <Compile Include="Model\Serialization\NgsiConvert.cs" />
+    <Compile Include="Model\Serialization\XmlAnyUtilities.cs" />
+    <Compile Include="Model\SimpleScope.cs" />
+    <Compile Include="Model\StatusCode.cs" />
+    <Compile Include="Model\StatusCodesExtensions.cs" />
+    <Compile Include="Model\StatusCodes.cs" />
+    <Compile Include="Model\SubscribeError.cs" />
+    <Compile Include="Model\SubscribeResponse.cs" />
+    <Compile Include="Model\UpdateActionType.cs" />
+    <Compile Include="Model\XmlTimeSpan.cs" />
+    <Compile Include="Operations\DiscoverContextAvailabilityRequest.cs" />
+    <Compile Include="Operations\DiscoverContextAvailabilityResponse.cs" />
+    <Compile Include="Operations\NotifyContextAvailabilityRequest.cs" />
+    <Compile Include="Operations\NotifyContextAvailabilityResponse.cs" />
+    <Compile Include="Operations\NotifyContextRequest.cs" />
+    <Compile Include="Operations\NotifyContextResponse.cs" />
+    <Compile Include="Operations\QueryContextRequest.cs" />
+    <Compile Include="Operations\QueryContextResponse.cs" />
+    <Compile Include="Operations\RegisterContextRequest.cs" />
+    <Compile Include="Operations\RegisterContextResponse.cs" />
+    <Compile Include="Operations\SubscribeContextAvailabilityRequest.cs" />
+    <Compile Include="Operations\SubscribeContextAvailabilityResponse.cs" />
+    <Compile Include="Operations\SubscribeContextRequest.cs" />
+    <Compile Include="Operations\SubscribeContextResponse.cs" />
+    <Compile Include="Operations\UnsubscribeContextAvailabilityRequest.cs" />
+    <Compile Include="Operations\UnsubscribeContextRequest.cs" />
+    <Compile Include="Operations\UnsubscribeContextResponse.cs" />
+    <Compile Include="Operations\UnsubscribeContextAvailabilityResponse.cs" />
+    <Compile Include="Operations\UpdateContextAvailabilitySubscriptionRequest.cs" />
+    <Compile Include="Operations\UpdateContextAvailabilitySubscriptionResponse.cs" />
+    <Compile Include="Operations\UpdateContextRequest.cs" />
+    <Compile Include="Operations\UpdateContextResponse.cs" />
+    <Compile Include="Operations\UpdateContextSubscriptionRequest.cs" />
+    <Compile Include="Operations\UpdateContextSubscriptionResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
