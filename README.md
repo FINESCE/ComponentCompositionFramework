@@ -28,7 +28,7 @@ Components implementing IComponent is managed and connected by the Composition S
 
 In order to implement a Component, one must implement the IComponent interface:
 
-!PIC.png!
+![IMAGE NOT FOUND](https://raw.github.com/username/projectname/branch/path/to/img.png)
 
 The starting point for any Component is the “Start” method, which is called by the Composition Service when it is determined the Component should be started. The Name and Description properties are strictly for debugging purposes.
  
