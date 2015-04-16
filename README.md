@@ -69,4 +69,5 @@ NGSI FIWARE (https://forge.fiware.org/plugins/mediawiki/wiki/fiware/index.php/FI
 
 ## Contact Person
 
-[Troels Lund Rasmussen](http://insero.com/en/about-us/contact/employees-and-management-team/troels-lund-rasmussen/)
+ * [Troels Lund Rasmussen](http://insero.com/en/about-us/contact/employees-and-management-team/troels-lund-rasmussen/)
+ * [Mikael Guldborg](http://insero.com/en/about-us/contact/employees-and-management-team/mikael-guldborg-rask-andersen/)
