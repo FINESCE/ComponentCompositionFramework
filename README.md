@@ -28,19 +28,19 @@ Components implementing IComponent is managed and connected by the Composition S
 
 In order to implement a Component, one must implement the IComponent interface:
 
-![IMAGE NOT FOUND](https://raw.githubusercontent.com/insero-software/component-composition-framework/master/Documentation/IComponent.png)
+![IComponent Image](https://raw.githubusercontent.com/insero-software/component-composition-framework/master/Documentation/IComponent.png)
 
 The starting point for any Component is the “Start” method, which is called by the Composition Service when it is determined the Component should be started. The Name and Description properties are strictly for debugging purposes.
  
 If the IComponent must allow other components to communicate with it, it can implement the IConnectableComponent interface:
 
-!PIC2.png!
+![IConnectable Component Imagee](https://raw.githubusercontent.com/insero-software/component-composition-framework/master/Documentation/IConnectableComponent.png)
 
 Notice that the IComponentCommunication interface does not require any implementation. It is up to the user to define the methods on an interface that extends from this, that can be exposed to other IComponents.
 
 Finally, we have an interface that allows for a components to connect to another components. This interface is called IConntingComponent<TComponentCommunication> and can be seen below:
 
-!PIC3.png!
+![IConnecting Component Imagee](https://raw.githubusercontent.com/insero-software/component-composition-framework/master/Documentation/IConnectableComponent.png)
 
 This is a generic interface of the IComponentCommunication implementation the IComponent must connect to.
 
