@@ -93,8 +93,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DefaultQueryUrls.cs" />
-    <Compile Include="Events\ContextNotifyEventArgs.cs" />
-    <Compile Include="Extensions\TimeSpanExtensions.cs" />
     <Compile Include="Extensions\UriExtensions.cs" />
     <Compile Include="Internal\NgsiControllerConfig.cs" />
     <Compile Include="Ngsi10ProviderService.cs" />
